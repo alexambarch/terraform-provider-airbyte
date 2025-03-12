@@ -635,7 +635,7 @@ func (r *ConnectionResource) Schema(ctx context.Context, req resource.SchemaRequ
 						Computed: true,
 						Optional: true,
 						PlanModifiers: []planmodifier.String{
-							speakeasy_stringplanmodifier.SuppressDiff(speakeasy_stringplanmodifier.ExplicitSuppress),
+							speakeasy_stringplanmodifier.SuppressCronDiff(),
 						},
 					},
 					"schedule_type": schema.StringAttribute{
